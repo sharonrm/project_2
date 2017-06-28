@@ -1,2 +1,17 @@
 # project_2
-Homeopathic Health app
+Recommendation App 
+
+As a busy parent I rarely have the time to watch tv let alone figure out what shows I might like to watch. This application 
+will allow anyone to enter a tv show they know they like and get back a suggestion for other shows they might like.
+
+API  link - https://tastedive.com/read/api
+
+NPM package - JS Hint
+
+Challenges - I think figuring out the API will br tricky as well as the general routing of the data and setting up login.
+
+Technology I anticipate using: Jquery, HTML, CSS, NODE.js, express, mustache, Javascript, pg promise, bodyparser, axios and ajax.
+
+Unsolved problems - still unsure how to get API to work and still unclear on how to incorporate 2 models.
+
+Installations Instructions - to follow.
