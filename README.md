@@ -6,7 +6,7 @@ will allow anyone to enter a tv show they know they like and get back a suggesti
 
 API  link - https://tastedive.com/read/api
 
-NPM package - JS Hint
+NPM package - JS Hint - https://github.com/jshint/jshint
 
 Challenges - I think figuring out the API will br tricky as well as the general routing of the data and setting up login.
 
@@ -21,3 +21,5 @@ Wireframes -
 (https://github.com/sharonrm/project_2/files/1107491/your_favorites.pdf)
 (https://github.com/sharonrm/project_2/files/1107492/your_saved_suggestions.pdf)
 (https://github.com/sharonrm/project_2/files/1107493/login_project_2.pdf)
+
+
