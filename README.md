@@ -14,7 +14,12 @@ Technology I anticipate using: Jquery, HTML, CSS, NODE.js, express, mustache, Ja
 
 Unsolved problems - still unsure how to get API to work and still unclear on how to incorporate 2 models.
 
-Installations Instructions - to follow.
+Installations Instructions - npm install express
+							 npm install pg-promise
+							 npm install body-parser
+							 npm install dotenv
+							 npm install axios
+							 npm install mustache-express
 
 Wireframes - 
 (https://github.com/sharonrm/project_2/files/1107490/new_suggestion.pdf)
