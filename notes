@@ -1,12 +1,27 @@
-Do I need three tables total?
+TABLE INFO-
 
-first search with the original movie title to locate imdb title.
+ NAME - movie_suggestions
+ 		createdb movie_suggestions
+  		psql -d movie_suggestions -f db/seeds.sql
 
-Then use imdb title to find similiar movies.
+NOTES FROM TIM -  representational_state_transfer in wikipedia - tells you the meaning of get, put, post and delete based on either a collection or an element.
 
-Store this information in users favorites.
-Can I use a poster path .jpg file to image?
 
- table list - movie_suggestions
- createdb movie_suggestions
-  psql -d movie_suggestions -f db/seeds.sql
+
+using jsHint Ctrl+Shift+J (or Cmd+Shift+J
+automatic - Cmd+Shift+P
+
+Questions
+===================================================
+Should my config .env be in my db file and my pgpromise in my models? 
+
+Table- Do I need three tables total?
+	first search with the original movie 
+	title to locate imdb title.
+
+	Then use imdb title to find similiar movies.
+	Store this information in users favorites.
+
+API - Can I use a poster path .jpg file to image?
+
+sample url: https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher

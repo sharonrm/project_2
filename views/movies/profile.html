@@ -12,20 +12,10 @@
 
 <body>
     <main>
-    <div class="container">
-     <nav>
-    <a href="/movies/new">Find a new!</a>
-     <a href="/users/logout">Logout</a>
-     </nav>
         <section>
-            Welcome, {{user.email}}
+            Welcome to your profile, {{user.email}}
             <div>
-            <h2>Your Movie Suggestions:</h2>
-            <h2 class='movie-list'></h2>
-            {{}}
-            </div>
-            <div>
-            
+                <a href="/users/logout">Logout</a>
             </div>
         </section>
     </main>
