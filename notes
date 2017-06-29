@@ -1,0 +1,12 @@
+Do I need three tables total?
+
+first search with the original movie title to locate imdb title.
+
+Then use imdb title to find similiar movies.
+
+Store this information in users favorites.
+Can I use a poster path .jpg file to image?
+
+ table list - movie_suggestions
+ createdb movie_suggestions
+  psql -d movie_suggestions -f db/seeds.sql

@@ -1,10 +1,6 @@
-const pgp = require('pg-promise')();
+module.exports = db;require('dotenv').config()
 
-// this is another way of doing it
-const db = pgp({
-  host: 'localhost',
-  port: 5432,
-  database: 'express_passport'
-});
-
-module.exports = db;
+const express = require('express'),
+	  app = express(),
+	  port = process.env.PORT || 3000,
+	  bodyParser = require
