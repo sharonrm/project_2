@@ -11,9 +11,8 @@ CREATE TABLE movies (
 	id BIGSERIAL PRIMARY KEY,
 	user_id INT REFERENCES users(id),
 	title VARCHAR NOT NULL,
-	summary VARCHAR,
-	poster VARCHAR,
-	releaseDate VARCHAR,
-	voterRating VARCHAR,
+	overview VARCHAR,
+	release_date VARCHAR,
+	voter_average VARCHAR,
 	movie_id VARCHAR
 );

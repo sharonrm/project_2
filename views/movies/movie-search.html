@@ -17,19 +17,21 @@
         <h1></h1>
         <h2>Search Movies</h2>
         <form id="search" action="http://localhost:8080/movies/search" method="POST">
-            <input type="text" id="search-input" placeholder="Movie Name" name="movie"/>
-            <input type="submit" id="search-button"/>
+            <input type="text" id="search-input" placeholder="Movie Name" name="movie" />
+            <input type="submit" id="search-button" />
         </form>
-        {{#movies}}
+        {{ #movies }}
         <div class="results">
-        <p>{{title}} </p>
-        <p>{{overview}}</p>
-        <img class='img' src={{poster_path}} alt="">
+            <h3 class = 'title'>Title: {{ title }} </h3>
+            <p class = 'summary'>Summary: {{ overview }}</p>
+            <p class = 'release_date'>Release Date: {{ release_date }}</p>
+            <p class = 'vote'>Voter Average: {{ vote_average }}</p>
+           <!--  <img class='poster' src={{poster_path}} alt=""> -->
+            <div id = 'save-form'></div>
+            <button id='save'>Save Movie</button>
         </div>
-        </div>
-        {{/movies}}
+    </div>
+    {{ /movies }}
 </body>
 
 </html>
-
-

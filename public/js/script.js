@@ -1,36 +1,38 @@
-$(()=>{
-console.log('script loaded')
+$(() => {
+        console.log('script loaded')
 
-let currentInput = '';
-//get search input
+        const saveTitle = () => {
+            $('#save').on('click', e => {
+                    e.preventDefault();
 
-// $('#search').on('submit', (e) => {
-// 	e.preventDefault();
-// 	const movie = $('#search-input').val();
-// 	console.log('doing search, ', movie);
-// 	callSearch(movie);
-// 	// movieSearch(movieSearchData);
-// });
+                    let t = $('.title').val()
+                    console.log('inside SAVE SAVE SAVE SAVE')
+                    console.log(t);
+                }
+                saveTitle(); 
+                callSave(movie);
 
-// const callSearch=(movie)=>{
-// 	$.ajax({
-// 		url:'http://localhost:8080/movies/search',
-// 		type: 'POST',
-// 		data: {
-// 			movie
-// 		},
-// 		success: data => {
-// 			// console.log('this is data for axios call', data);
-// 			console.log('the reulst of stuff',data);
+            });
 
-// 		},
-// 		error: err => {
-// 			console.log(err);
-// 		}
-// 	})
-// }
+        const callSave = (movie) => {
+            $.ajax({
+                url: '/movies/search'
+                type: 'POST',
+                data: {
+                    movie.title,
+                },
+                success: data => {
+                    // console.log('this is data for axios call', data);
+                    console.log('the reulst of saved items---->', data);
+
+                },
+                error: err => {
+                    console.log(err);
+                }
+            })
+        }
 
 
 
 
-})//end of jq loader
+    }) //end of jq loader
