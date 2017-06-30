@@ -16,13 +16,20 @@
         </nav>
         <h1></h1>
         <h2>Search Movies</h2>
-        <form id="search">
-            <input type="text" id="search-input" placeholder="Movie Name" />
-            <button id="search-button">Search</button>
+        <form id="search" action="http://localhost:8080/movies/search" method="POST">
+            <input type="text" id="search-input" placeholder="Movie Name" name="movie"/>
+            <input type="submit" id="search-button"/>
         </form>
+        {{#movies}}
         <div class="results">
+        <p>{{title}} </p>
+        <p>{{overview}}</p>
+        <img class='img' src={{poster_path}} alt="">
         </div>
-    </div>
+        </div>
+        {{/movies}}
 </body>
 
 </html>
+
+

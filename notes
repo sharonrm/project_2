@@ -6,7 +6,8 @@ TABLE INFO-
 
 NOTES FROM TIM -  representational_state_transfer in wikipedia - tells you the meaning of get, put, post and delete based on either a collection or an element.
 
-
+Routes - url:'http://localhost:8080/movies/search'
+ and router.post('/search', (req, res) have to match.
 
 using jsHint Ctrl+Shift+J (or Cmd+Shift+J
 automatic - Cmd+Shift+P
