@@ -4,7 +4,7 @@ const pgp = require('pg-promise')();
 const db = pgp({
   host: 'localhost',
   port: 5432,
-  database: 'express_passport'
+  database: 'movie_suggestions'
 });
 
 module.exports = db;

@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS users CASCADE;
-DROP TABLE IF EXISTS shows CASCADE;
+DROP TABLE IF EXISTS movies CASCADE;
 
 CREATE TABLE users (
   id BIGSERIAL PRIMARY KEY,
@@ -11,6 +11,9 @@ CREATE TABLE movies (
 	id BIGSERIAL PRIMARY KEY,
 	user_id INT REFERENCES users(id),
 	title VARCHAR NOT NULL,
-	poster_path VARCHAR,
-	release_date VARCHAR
+	summary VARCHAR,
+	poster VARCHAR,
+	releaseDate VARCHAR,
+	voterRating VARCHAR,
+	movie_id VARCHAR
 );

@@ -23,5 +23,13 @@ Table- Do I need three tables total?
 	Store this information in users favorites.
 
 API - Can I use a poster path .jpg file to image?
+Will need a forEach to go through all the data.
 
-sample url: https://api.themoviedb.org/3/search/movie?api_key={api_key}&query=Jack+Reacher
+title = response.data.results["0"].title
+summary = response.data.results["0"].overview
+poster = response.data..results["0"].poster_path
+releaseDate = response.data.results["0"].release_date
+voterRating = response.data.results["0"].vote_average
+movie_id = response.data.results["0"].id
+
+
