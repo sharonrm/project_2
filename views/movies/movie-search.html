@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="/js/jquery.js"></script>
     <script type='text/javascript' src='/js/script.js'></script>
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <a href="/shows">Saved Movies</a>
+            <a href="/saved-movies">Saved Movies</a>
             <a href="/user/logout">Log Out</a>
         </nav>
         <h1></h1>
@@ -22,13 +22,14 @@
         </form>
         {{ #movies }}
         <div class="results">
-            <h3 class = 'title'>Title: {{ title }} </h3>
+            <h3 class = 'title' data-id={{title}}>Title: {{ title }} </h3>
+            <p class = 'movie_id' data-id={{id}}>ID: {{ id }}</p>
             <p class = 'summary'>Summary: {{ overview }}</p>
             <p class = 'release_date'>Release Date: {{ release_date }}</p>
             <p class = 'vote'>Voter Average: {{ vote_average }}</p>
            <!--  <img class='poster' src={{poster_path}} alt=""> -->
-            <div id = 'save-form'></div>
-            <button id='save'>Save Movie</button>
+            <div class = 'save-form'></div>
+            <button class ='save'>Save Movie</button>
         </div>
     </div>
     {{ /movies }}

@@ -20,7 +20,7 @@ router.post('/search', (req, res) => {
             // console.log('inside findImdbID THEN----------->', response.data.results[0].id);
             imdb.findByMovieId(response.data.results[0].id)
                 .then(movies => {
-                    console.log('inside imdb.findByMovieId', movies.data.results)
+                    // console.log('inside imdb.findByMovieId', movies.data.results)
                     // now we have all those similar movies
                     // lets parse it now and then render it
                     // let parsedMovies = imdb.parsedSimiliarMovies(movies);
@@ -33,6 +33,16 @@ router.post('/search', (req, res) => {
         })
         .catch(err => console.log(err));
 });
+
+router.get('/:id', (req, res) => {
+    console.log(req.params.id, req.user.id)
+    imdb
+    .
+
+   res.render('movies/saved-movies');
+    })
+  
+
 
 
 
