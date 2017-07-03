@@ -5,29 +5,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Profile</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
 </head>
 
-<body>
+<body id = 'profile'>
     <main>
-    <div class="container">
-     <nav>
-    <a href="/movies/new">Find a new movie!</a>
-     <a href="/users/logout">Logout</a>
-     </nav>
-        <section>
-            Welcome, {{user.email}}
-            <div>
-            <h2>Your Movie Suggestions:</h2>
-            <h2 class='movie-list'></h2>
-            {{}}
-            </div>
-            <div>
-            
-            </div>
-        </section>
+        <div class="container">
+            <nav>
+                <p><a href="/movies/new">Find a new movie!</a></p>
+                <p> <a href="/movie/logout">Logout</a></p>
+            </nav>
+            <section>
+                <p>Welcome, {{user.email}}
+                    <p>
+                        <div>
+                            <h2>Your Movie Suggestions:</h2>
+                            <h2 class='movie-list'></h2> {{}}
+                        </div>
+                        <div>
+                        </div>
+            </section>
     </main>
 </body>
 

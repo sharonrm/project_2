@@ -1,4 +1,4 @@
-$(() => {/*jshint ignore:start*/
+$(() => { /*jshint ignore:start*/
 
         $('body').on('click', '.save', function(e) {
             e.preventDefault();
@@ -14,22 +14,22 @@ $(() => {/*jshint ignore:start*/
                 movie_id: movie_id
             };
 
-            $('.results').empty();
+            // $('.results').empty();
             console.log(savedMovieData);
             saveMovie(savedMovieData);
         });
 
         const saveMovie = (savedMovieData) => {
             $.ajax({
-                url: '/movies/',
+                url: 'http://localhost:8080/profile',
                 type: 'POST',
                 data: {
                     savedMovieData
                 },
                 success: data => {
-                    $.each(data, function(i, movie){
-                    	$movie.append(`<li>title: title, movie_id: movie_id</li>`)
-                    })
+
+                    window.location.replace('movies/profile');
+
                     console.log('the result of saved items---->', data);
 
 

@@ -34,10 +34,13 @@ router.post('/search', (req, res) => {
         .catch(err => console.log(err));
 });
 
-router.get('/:id', (req, res) => {
-    console.log(req.params.id, req.user.id)
-    imdb
-    .
+router.post('/profile', (req, res) => {
+    Movies
+    .favoriteMovie(req.body.data)
+    .then(data => res.json(data))
+    // console.log(req.params.id, req.user.id)
+    // imdb
+    // .
 
    res.render('movies/saved-movies');
     })
