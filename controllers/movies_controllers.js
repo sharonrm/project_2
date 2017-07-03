@@ -16,11 +16,14 @@ router.delete('/:id', (req,res) => {
     Movies
     .deleteById(req.params.id)
     .then(data =>{
-    res.redirect('movies/saved-movies.html')
+        res.send(data)
+    // res.redirect('movies/saved')
 
-    }).catch()
+    }).catch(err => console.log(err));
 })
 
+//to add to a new table
+// router.put()
 
 router.get('/saved', (req,res)=> {
     Movies

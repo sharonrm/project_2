@@ -51,11 +51,13 @@ $(() => { /*jshint ignore:start*/
         const deleteSingleMovie = (getId) => {
             // console.log(getId);
 
+
             $.ajax({
-                url: `/movies/:${getId}`,
+                url: `/movies/${getId}`,
                 type: 'DELETE',
                 success: data => {
-                    window.location.replace('movies/saved-movies');
+                    console.log('return from ajax', data)
+                    window.location.reload();
                 },
                 error: err => {
                     console.log(err);

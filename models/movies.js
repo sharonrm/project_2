@@ -9,7 +9,7 @@ const getAllFavoritesByUser =(user_id) => {
 }
 
 const deleteById = (movie_id) => {
-	return db.oneOrNone('DELETE FROM movies WHERE movie_id = $', [movie_id]);
+	return db.oneOrNone('DELETE FROM movies WHERE movie_id = $1', [movie_id]);
 }
 
 module.exports = { addFavoriteMovie, getAllFavoritesByUser, deleteById };
