@@ -11,6 +11,11 @@ router.get('/new', (req, res) => {
     res.render('movies/movie-search');
 })
 
+router.get('/saved', (req,res)=> {
+    
+
+})
+
 router.post('/search', (req, res) => {
     console.log(req.body.movie);
     // going to get the id of movie with the name from the user
@@ -34,16 +39,18 @@ router.post('/search', (req, res) => {
         .catch(err => console.log(err));
 });
 
-router.post('/profile', (req, res) => {
+// the only accumulated route till here is 
+// localhost:3000/movies/
+router.post('/', (req, res) => {
+    console.log('creating a new fav movie controller ', req.body.title, req.body.movie_id, req.user);
+    // res.send(req.body);
     Movies
-    .favoriteMovie(req.body.data)
+    .addFavoriteMovie(req.body, req.user.id)
     .then(data => res.json(data))
-    // console.log(req.params.id, req.user.id)
-    // imdb
-    // .
-
-   res.render('movies/saved-movies');
+    .catch(err => console.log(err));
     })
+
+
   
 
 

@@ -1,17 +1,19 @@
 $(() => { /*jshint ignore:start*/
 
-        $('body').on('click', '.save', function(e) {
+        $('.save').on('click', function(e) {
+        	console.log('who got clicked -> ',e.target);
+       
             e.preventDefault();
 
-
-            const title = $('.title').html(),
-                movie_id = $('.results').children('.movie_id').attr('data-id');
+            const children = e.target.parentElement.children,
+            	title = children[0].innerText
+            	movie_id = e.target.parentElement.children[1].getAttribute('data-id');
 
 
             const savedMovieData = {
 
-                title: title,
-                movie_id: movie_id
+                "title": title,
+                "movie_id": movie_id
             };
 
             // $('.results').empty();
@@ -21,18 +23,13 @@ $(() => { /*jshint ignore:start*/
 
         const saveMovie = (savedMovieData) => {
             $.ajax({
-                url: 'http://localhost:8080/profile',
+                url: '/movies',
                 type: 'POST',
-                data: {
-                    savedMovieData
-                },
+                data: savedMovieData,
                 success: data => {
-
-                    window.location.replace('movies/profile');
+                    // window.location.replace('movies/profile');
 
                     console.log('the result of saved items---->', data);
-
-
                 },
                 error: err => {
                     console.log(err);

@@ -39,6 +39,7 @@ app.use('/movies', auth.restrict, require('./controllers/movies_controllers'))
 
 
 
+
 app.get('/', (req, res) => {
     res.render('index');
 });
