@@ -11,9 +11,25 @@ router.get('/new', (req, res) => {
     res.render('movies/movie-search');
 })
 
-router.get('/saved', (req,res)=> {
-    
+router.delete('/:id', (req,res) => {
+     console.log(req.params.id);
+    Movies
+    .deleteById(req.params.id)
+    .then(data =>{
+    res.redirect('movies/saved-movies.html')
 
+    }).catch()
+})
+
+
+router.get('/saved', (req,res)=> {
+    Movies
+    .getAllFavoritesByUser(req.user.id)
+    .then( data=> {
+        console.log('the data from movies by id  ->' , data);
+        res.render('movies/saved-movies.html', {data});
+    })
+    .catch(err => console.log(err));
 })
 
 router.post('/search', (req, res) => {

@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<script src="/js/jquery.js"></script>/script>
-    <script type='text/javascript' src='js/script.js'></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
+    <script type='text/javascript' src='/js/script.js'></script>
 </head>
+
 <body>
-<div class="container">
-    <nav>
-    <a href="/user/logout">Log Out</a>
-    <a href="/movies/search">Search Movies</a>
-	</nav>
-		<div>Your Movie Suggestions:</div>
-			<div class = 'movie-list'>
-		{{#movies}}
-	<a href = `/movies/{{id}}`>ID:{{ id }}>
-	<h2 class = 'title'>`Title: {{title}}`</h2>
-	{{/movies}}
-	</a>
-	</div>
+    <div class="container">
+        <nav>
+            <a href="/user/logout">Log Out</a>
+            <a href="/movies/search">Search Movies</a>
+        </nav>
+        <div>Your Movie Suggestions:</div>
+        <div class='movie-list'>
+            {{#data}}
+        <p>ID:{{ movie_id }}</p>
+    	<h2 class ='title'>{{title}}</h2>
+		<button class="deleteBtn" id="{{movie_id}}">DELETE</button>
+			{{/data}}
+	
+        </div>
 </body>
+
 </html>

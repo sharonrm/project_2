@@ -5,8 +5,11 @@ const addFavoriteMovie = (movieInfo, userId) => {
 }
 
 const getAllFavoritesByUser =(user_id) => {
-	return db.any(`SELECT * FROM movies WHERE user_id = )
+	return db.any('SELECT * FROM movies WHERE user_id = $1', [user_id]);
 }
 
+const deleteById = (movie_id) => {
+	return db.oneOrNone('DELETE FROM movies WHERE movie_id = $', [movie_id]);
+}
 
-module.exports = { addFavoriteMovie };
+module.exports = { addFavoriteMovie, getAllFavoritesByUser, deleteById };

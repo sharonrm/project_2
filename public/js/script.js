@@ -1,13 +1,13 @@
 $(() => { /*jshint ignore:start*/
 
         $('.save').on('click', function(e) {
-        	console.log('who got clicked -> ',e.target);
-       
+            console.log('who got clicked -> ', e.target);
+
             e.preventDefault();
 
-            const children = e.target.parentElement.children,
-            	title = children[0].innerText
-            	movie_id = e.target.parentElement.children[1].getAttribute('data-id');
+              let children = e.target.parentElement.children,
+                     title = children[0].innerText
+                  movie_id = e.target.parentElement.children[1].getAttribute('data-id');
 
 
             const savedMovieData = {
@@ -27,9 +27,35 @@ $(() => { /*jshint ignore:start*/
                 type: 'POST',
                 data: savedMovieData,
                 success: data => {
-                    // window.location.replace('movies/profile');
+
 
                     console.log('the result of saved items---->', data);
+                },
+                error: err => {
+                    console.log(err);
+                }
+            })
+
+        };
+
+        $('.deleteBtn').on('click', function(e) {
+            // console.log('movie to delete --->', e.target.id)
+            e.preventDefault();
+
+            const getId = e.target.id;
+            // console.log(getId);
+            deleteSingleMovie(getId);
+        })
+
+
+        const deleteSingleMovie = (getId) => {
+            // console.log(getId);
+
+            $.ajax({
+                url: `/movies/:${getId}`,
+                type: 'DELETE',
+                success: data => {
+                    window.location.replace('movies/saved-movies');
                 },
                 error: err => {
                     console.log(err);
@@ -39,7 +65,8 @@ $(() => { /*jshint ignore:start*/
         }
 
 
+
         /*jshint ignore:end*/
-        ;
+
 
     }) //end of jq loader
