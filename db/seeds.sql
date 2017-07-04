@@ -11,5 +11,6 @@ CREATE TABLE movies (
 	id BIGSERIAL PRIMARY KEY,
 	user_id INT REFERENCES users(id),
 	title VARCHAR NOT NULL,
-	movie_id VARCHAR
+	movie_id VARCHAR,
+	overview VARCHAR
 	);

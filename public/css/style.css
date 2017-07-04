@@ -4,13 +4,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-#profile   {
-	background-image: url(maxresdefault.jpg);
+
+#profile {
+    background-image: url(./1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #new {
-	background-image: url(maxresdefault.jpg);
+    background-image: url(./1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -19,14 +21,38 @@
     font-family: 'Questrial', sans-serif;
     font-color: white;
     display: grid;
-    grid-template-columns: 18%;
+    grid-template-columns: 30%;
     justify-content: center;
+}
+
+.movie-search {
+    font-size: 25px;
+}
+
+#search {
+    background-color: black;
 }
 
 h1 {
     text-align: center;
     font-family: 'Questrial', sans-serif;
-    font-size: 75px;
+    font-size: 60px;
+    color: white!Important;
+    padding: 1em;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    font-size: 40px;
+    color: white!Important;
+    padding: 1em;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+    font-size: 25px;
     color: white!Important;
     padding: 1em;
 }
@@ -41,43 +67,63 @@ a {
     display: inline-block;
     padding: 10px 10px;
     text-align: center;
-
 }
-a:hover
-{
-        background:#BFB3B3;
+
+a:hover {
+    background: #BFB3B3;
 }
 
 p {
     font-family: 'Questrial', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     text-align: center;
 }
-form input:valid {
-  background: white;
-}
-input[type="text"] {
-  display: block;
-  margin: 0;
-  width: 100%;
-  font-family: 'Questrial', sans-serif;
-  font-size: 18px;
- }
 
-input[type="text"]:focus {
-  outline: none;
+form input:valid {
+    background: white;
+}
+
+input {
+    display: block;
+    margin: 0;
+    width: 100%;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+}
+
+button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+}
+
+#search-button {
+    width: 20%;
+    margin: 0 auto;
+    background-color: #BFB3B3
+    
+}
+
+#search-input {
+    width: 50%;
+    margin: 0 auto;
+}
+
+input:focus {
+    outline: none;
 }
 
 label {
-    font-size: 20px;
+    font-size: 25px;
     display: block;
     width: 150px;
-    float: left;
-
 }
 
 form {
-    font-size: 30px;
+    font-size: 25px;
     color: white;
 }

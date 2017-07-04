@@ -6,9 +6,10 @@
     <title>Document</title>
     <script src="/js/jquery.js"></script>
     <script type='text/javascript' src='/js/script.js'></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
+<body id = 'search'>
     <div class="container">
         <nav>
             <a href="/movies/saved">Saved Movies</a>
@@ -17,19 +18,19 @@
         <h1></h1>
         <h2>Search Movies</h2>
         <form id="search" action="http://localhost:8080/movies/search" method="POST">
-            <input type="text" id="search-input" placeholder="Movie Name" name="movie" />
+            <input type="text" id="search-input" class = 'movie_search' placeholder="Movie Name" name="movie" />
             <input type="submit" id="search-button" />
         </form>
         {{ #movies }}
         <div class="results">
-            <h3 class = 'title' data-id={{title}}>Title: {{ title }} </h3>
-            <p class = 'movie_id' data-id={{id}}>ID: {{ id }}</p>
-            <p class = 'summary'>Summary: {{ overview }}</p>
-            <p class = 'release_date'>Release Date: {{ release_date }}</p>
-            <p class = 'vote'>Voter Average: {{ vote_average }}</p>
-           <!--  <img class='poster' src={{poster_path}} alt=""> -->
-            <div class = 'save-form'></div>
-            <button class ='save'>Save Movie</button>
+            <h3 class='title' data-id={{title}}>Title: {{ title }} </h3>
+            <p class='movie_id' data-id={{id}}>ID: {{ id }}</p>
+            <p class='summary'>Summary: {{ overview }}</p>
+            <p class='release_date'>Release Date: {{ release_date }}</p>
+            <p class='vote'>Voter Average: {{ vote_average }}</p>
+            <!--  <img class='poster' src={{poster_path}} alt=""> -->
+            <div class='save-form'></div>
+            <button class='save'>Save Movie</button>    
         </div>
     </div>
     {{ /movies }}

@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<script src="/js/jquery.js"></script>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="/js/jquery.js"></script>
     <script type='text/javascript' src='/js/script.js'></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-	
+<header>HI</header>
+    <div id='login-wrapper'></div>
+    <div class="results">
+        <h3 class='title' data-id={{title}}>Title: {{ title }} </h3>
+        <p class='movie_id' data-id={{id}}>ID: {{ id }}</p>
+        <p class='summary'>Summary: {{ overview }}</p>
+    </div>
 </body>
+
 </html>

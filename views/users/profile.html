@@ -10,22 +10,22 @@
     <script src="/js/script.js"></script>
 </head>
 
-<body id = 'profile'>
+<body id='profile'>
     <main>
         <div class="container">
             <nav>
-                <p><a href="/movies/new">Find a new movie!</a></p>
-                <p> <a href="/movie/logout">Logout</a></p>
+                <a href="/movies/saved">Saved Movies</a>
+                <a href="/movies/new">Movie Search</a>
+                <a href="/movie/logout">Logout</a>
             </nav>
             <section>
-                <p>Welcome, {{user.email}}
-                    <p>
-                        <div>
-                            <h2>Your Movie Suggestions:</h2>
-                            <h2 class='movie-list'></h2> {{}}
-                        </div>
-                        <div>
-                        </div>
+                <h2>Welcome, {{user.email}}
+                    </h2>
+                <div>
+                    <h2 class='movie-list'></h2> {{}}
+                </div>
+                <div>
+                </div>
             </section>
     </main>
 </body>

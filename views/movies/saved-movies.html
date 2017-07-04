@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
     <script src="/js/jquery.js"></script>
     <script type='text/javascript' src='/js/script.js'></script>
 </head>
 
-<body>
+<body id = 'search'>
     <div class="container">
         <nav>
             <a href="/user/logout">Log Out</a>
-            <a href="/movies/search">Search Movies</a>
+            <a href="/movies/new">Search Movies</a>
         </nav>
         <div>Your Movie Suggestions:</div>
         <div class='movie-list'>
             {{#data}}
-        <p>ID:{{ movie_id }}</p>
-    	<h2 class ='title'>{{title}}</h2>
-		<button class="deleteBtn" id="{{movie_id}}">DELETE</button>
-			{{/data}}
-	
+            <p class='movie_id' data-id={{movie_id}}>ID:{{ movie_id }}</p>
+            <p class='single_movies'><a href="/movies/{{id}}">Table ID:{{id}}</a></p>
+            <p class ='summary'>{{ overview }}</p>
+            <h2 class='title'>{{title}}</h2>
+            <button class="deleteBtn" id="{{movie_id}}">DELETE</button>
+            <form class='add-comment'>
+             <!--    <label>Movie Notes:</label>
+                <input class="movie-comment" />
+                <button type="submit">Submit</button>
+            </form> -->
+            {{/data}}
         </div>
 </body>
 
