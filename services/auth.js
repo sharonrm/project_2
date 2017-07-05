@@ -91,7 +91,7 @@ passport.use(
                     } else {
                         return done(null, false);
                     }
-                });
+                }).catch(err => console.log(err));
         })
 );
 

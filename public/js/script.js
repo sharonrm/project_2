@@ -49,7 +49,7 @@ $(() => { /*jshint ignore:start*/
         $('.deleteBtn').on('click', function(e) {
             // console.log('movie to delete --->', e.target.id)
             e.preventDefault();
-
+           
             const getId = e.target.id;
             // console.log(getId);
             deleteSingleMovie(getId);
