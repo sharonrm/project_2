@@ -12,21 +12,20 @@
 
 <body id='profile'>
     <main>
-        <div class="container">
+        <section>
+            <h2>Welcome</h2>
+            <p>{{user.email}}</p>
+            <div>
+                <h2 class='movie-list'></h2> {{}}
+            </div>
+        </section>
+        <div id="container-profile">
             <nav>
                 <a href="/movies/saved">Saved Movies</a>
                 <a href="/movies/new">Movie Search</a>
                 <a href="/movie/logout">Logout</a>
             </nav>
-            <section>
-                <h2>Welcome, {{user.email}}
-                    </h2>
-                <div>
-                    <h2 class='movie-list'></h2> {{}}
-                </div>
-                <div>
-                </div>
-            </section>
+        </div>
     </main>
 </body>
 

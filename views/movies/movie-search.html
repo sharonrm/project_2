@@ -10,7 +10,7 @@
 </head>
 
 <body id = 'search'>
-    <div class="container">
+    <div class="container-search">
         <nav>
             <a href="/movies/saved">Saved Movies</a>
             <a href="/user/logout">Log Out</a>
@@ -21,6 +21,7 @@
             <input type="text" id="search-input" class = 'movie_search' placeholder="Movie Name" name="movie" />
             <input type="submit" id="search-button" />
         </form>
+        <div class = 'box-results'>
         {{ #movies }}
         <div class="results">
             <h3 class='title' data-id={{title}}>Title: {{ title }} </h3>
