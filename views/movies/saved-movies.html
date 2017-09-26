@@ -11,11 +11,12 @@
 
 <body id = 'search'>
     <div class="container">
-        <nav>
-            <a href="/user/logout">Log Out</a>
-            <a href="/movies/new">Search Movies</a>
+        <nav class="container-nav">
+            <a href="/user/logout" class="nav">Log Out</a>
+            <a href="/movies/new" class="nav">Search</a>
         </nav>
-        <div>Your Movie Suggestions:</div>
+        <div id='container-saved'>
+        <h1>Your Movie Suggestions:</h1>
         <div class='movie-list'>
             {{#data}}
             <p class='movie_id' data-id={{movie_id}}>ID:{{ movie_id }}</p>
@@ -23,12 +24,15 @@
             <p class ='summary'>{{ overview }}</p>
             <h2 class='title'>{{title}}</h2>
             <button class="deleteBtn" id="{{movie_id}}">DELETE</button>
-            <form class='add-comment'>
-             <!--    <label>Movie Notes:</label>
-                <input class="movie-comment" />
-                <button type="submit">Submit</button>
-            </form> -->
-            {{/data}}
+                <form class='add-comment'>
+                 <!--    <label>Movie Notes:</label>
+                    <input class="movie-comment" />
+                    <button type="submit">Submit</button>
+                </form> -->
+                {{/data}}
+         
+                 </form>
+        </div>
         </div>
 </body>
 

@@ -1,26 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial');
+
+/*******login page***************/
+
+
 #login {
     background-image: url(./1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#profile {
-    background-image: url(./1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#new {
-    background-image: url(./1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#container-profile {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 #login-wrapper {
     display: flex;
     flex-direction: column;
@@ -28,34 +16,115 @@
     align-items: center;
 
 }
-
-.container {
-    display: flex;
-    justify-content: center;
-}
-
-.results {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    height: 90vh;
-    width: 80vw;
-    padding: 10px 10px;
-    border: 10px;
-    border-color: #BFB3B3;
-    border-style: solid;
-}
-
-
 .results-login {
     font-family: 'Questrial', sans-serif;
     font-color: white;
     
 }
+.login {
+    width: 150px;
+}
+input:focus {
+    outline: none;
+}
+
+#password {
+font-color: white;
+}
+
+form {
+    font-size: 25px;
+    color: white;
+}
+#new {
+    background-image: url(./1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/****************profile *************/
+
+#profile {
+    background-image: url(./1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container-welcome {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.welcome-email {
+    /*text-align: center;*/
+    margin-left: 40px;
+    margin-bottom: 60px;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 30px;
+
+}
+
+#container-profile {
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+}
+
+nav ul { list-style-type: none; }
+
+li > .profile {
+    width: 75vh;
+    height: 25vh;
+    text-decoration: none;
+    margin-right: 
+}
+
+/*saved movies- nav bar*/
+
+.container-nav {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    
+}
+
+a .nav {
+ /*   flex: 1;*/
+}
+
+.box-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
+    display: -ms-flex;
+    display: -webkit-flex;
+
+   
+}
+.box-results > div {
+
+    border-color: white;
+    padding: 10px;
+    border: solid 1px;
+    width: 50%;
+    height: 60%;
+
+}
+.box-results > div:first-child {
+    margin-right: 20px;
+}
+
+
+
 
 .movie-search {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #search {
@@ -97,15 +166,17 @@ a {
     text-align: center;
 }
 
+
+
 a:hover {
     background: #BFB3B3;
 }
 
 p {
     font-family: 'Questrial', sans-serif;
-    font-size: 25px;
+    font-size: 18px;
     color: white;
-    text-align: left;
+    /*text-align: left;*/
 }
 
 
@@ -117,9 +188,7 @@ input {
     font-size: 18px;
 
 }
-.login {
-    width: 150px;
-}
+
 label{
     font-family: 'Questrial', sans-serif;
     font-size: 18px;
@@ -129,10 +198,11 @@ label{
 
 button {
     text-align: center;
-    margin: 0 auto;
+    margin-top: 100px;
     width: 50%;
     font-family: 'Questrial', sans-serif;
     font-size: 18px;
+
 }
 
 #search-button {
@@ -146,12 +216,6 @@ button {
     margin: 0 auto;
 }
 
-input:focus {
-    outline: none;
-}
 
 
-form {
-    font-size: 25px;
-    color: white;
-}
+

@@ -12,15 +12,17 @@
 
 <body id='profile'>
     <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>{{user.email}}</p>
+        <section id = "container-welcome">
+            <div class = "Welcome">
+                <h2>Welcome</h2>
+                <div class = "welcome-email">{{user.email}}</div>
+                </div>
             <div>
                 <h2 class='movie-list'></h2> {{}}
             </div>
         </section>
         <div id="container-profile">
-            <nav>
+            <nav class = "profile">
                 <a href="/movies/saved">Saved Movies</a>
                 <a href="/movies/new">Movie Search</a>
                 <a href="/movie/logout">Logout</a>

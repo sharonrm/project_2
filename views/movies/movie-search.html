@@ -21,20 +21,23 @@
             <input type="text" id="search-input" class = 'movie_search' placeholder="Movie Name" name="movie" />
             <input type="submit" id="search-button" />
         </form>
-        <div class = 'box-results'>
+    </div>
+    <div class = 'box-results'>
         {{ #movies }}
+        <div>
         <div class="results">
-            <h3 class='title' data-id={{title}}>Title: {{ title }} </h3>
-            <p class='movie_id' data-id={{id}}>ID: {{ id }}</p>
-            <p class='summary'>Summary: {{ overview }}</p>
+            <p class='title' data-id={{title}}>Title: {{ title }} </p><br>
+            <p class='movie_id' data-id={{id}}>ID: {{ id }}</p> <br>
+            <p class='summary'>Summary: {{ overview }}</p><br>
             <p class='release_date'>Release Date: {{ release_date }}</p>
             <p class='vote'>Voter Average: {{ vote_average }}</p>
             <!--  <img class='poster' src={{poster_path}} alt=""> -->
-            <div class='save-form'></div>
-            <button class='save'>Save Movie</button>    
+            <p class='save-form'></p>
+            <button class='save'>Save Movie</button> 
         </div>
-    </div>
+        </div>
     {{ /movies }}
+    </div>
 </body>
 
 </html>
